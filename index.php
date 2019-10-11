@@ -60,22 +60,18 @@
                     include "presentation/categoryP.php";
                     $cp = new CategoryP();
                     $cp->ShowAllCategories();
+                    // echo $cp->GetCategory();
                 ?>
             </div><!-- End. list-group -->
         </div>
         <div class="col-sm-9">
             <h2>List of products</h2>
             <div class="row">
-                <div class="col-sm-4">
-                <div class="card">
-                    <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-title">John Doe</h4>
-                        <p class="card-text">Some example text.</p>
-                        <a href="#" class="btn btn-primary">See Profile</a>
-                    </div>
-                </div>
-                </div>
+                <?php
+                    include "presentation/productP.php";
+                    $pp = new ProductP();
+                    $pp->ShowProductsInCategory();
+                ?>
             </div>    
         </div>
     </div>
