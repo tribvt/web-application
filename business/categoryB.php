@@ -3,16 +3,20 @@
     // $test = new CategoryB();
     // $test->GetAllCategories();
     class CategoryB{
+        private $cat_list = null;
+
         public function GetAllCategories(){
-            $sql = "SELECT * FROM category";
-            $db = new Database();
-            $result = $db->select($sql);
+            if ($this->cat_list == null){
+                $sql = "SELECT * FROM category";
+                $db = new Database();
+                $this->cat_list = $db->select($sql);
+            }
 
             // while ($row = mysqli_fetch_array($result)){
             //     echo $row['cat_name'];
             // }
 
-            return $result;
+            return $this->cat_list;
         }
     }
 ?>

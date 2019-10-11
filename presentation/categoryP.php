@@ -27,7 +27,7 @@
 
         public function GetCategory(){
             if(!isset($_GET['category']))
-                $cat_id = 1;
+                $cat_id = 0;
             else
                 $cat_id = $_GET['category'];
             return $cat_id;

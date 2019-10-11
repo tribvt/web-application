@@ -70,7 +70,8 @@
                 <?php
                     include "presentation/productP.php";
                     $pp = new ProductP();
-                    $pp->ShowProductsInCategory();
+                    // $pp->ShowProductsInCategory();
+                    $pp->ShowFeaturedProduct();
                 ?>
             </div>    
         </div>
